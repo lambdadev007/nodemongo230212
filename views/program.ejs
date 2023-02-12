@@ -36,7 +36,7 @@
                 <a href="#bottom" >تواصل معنا</a>
             </li>
             <li>
-                <a href="/Login" class = "login">تسجيل الدخول</a>
+                <a href="/login" class = "login">تسجيل الدخول</a>
             </li>
         </ul>
     </nav>
@@ -51,7 +51,7 @@
       <h5 class="card-title">البرنامج العلاجي لاضطراب القلق الاجتماعي</h5>
       <p class="card-text">يهدف البرنامج العلاجي إلى تزويدك بالتثقيف النفسي حول اضطراب القلق الاجتماعي بطريقة علمية. وتساعدك على فهم الذات وتقبلها، والتواصل معها بطريقة إيجابية دون الحكم عليها، والتركيز على اللحظة الراهنة والتأمل، وهذا كله يؤدي للتقليل والتخفيف من الاعراض.</p>
       <a href="/pro1" class="button">للمزيد</a>
-      <a href="/Login" class="button">انضم الان</a>
+      <a href="/login" class="button">انضم الان</a>
     </div>
   </div>
   <div class="card" id="card22">
@@ -60,7 +60,7 @@
       <h5 class="card-title">البرنامج العلاجي لاضطراب الاكتئاب</h5>
       <p class="card-text" >يهدف البرنامج العلاجي إلى تزويدك بالتثقيف النفسي حول اضطراب الاكتئاب بطريقة علمية، والتدريب على تحديد الأفكار الغير منطقية والافتراضات والأفكار التلقائية التي تساهم من استمرارية التفكير بطريقة غير منطقية والتدريب على فحصها ومناقشتها بطريقة علمية لتغيير تفسيرها، والتدريب على التعامل مع نقد الذات، وأيضًا على اتخاذ القرار والقدرة على حل المشكلات، واكتساب مهارات لإدارة الانتكاسة.</p>
       <a href="/pro2" class="button">للمزيد</a>
-      <a href="/Login" class="button">انضم الان</a>
+      <a href="/login" class="button">انضم الان</a>
     </div>
   </div>
   <div class="card" id =card33 >
@@ -69,7 +69,7 @@
       <h5 class="card-title">برنامج تقدير الذات</h5>
       <p class="card-text">يهدف هذا البرنامج إلى مساعدتك لاكتشاف ذاتك ومن أنت وماذا تريد وكيف تؤكد ذاتك أي تعبر عن ما تريد ، والتركيز على أفكارك وسلوكياتك وتأثيرها ، وستكتشف أيضا نقاط قوتك وتعززها و نقاط ضعفك وتتقبلها وتعمل على تحسينها ، ويساعدك أن تصل الى مرحلة التوازن في تقدير الذات والتسامح معها وكيف تصف ذاتك بشكل جديد .</p>
       <a href="/pro3" class="button">للمزيد</a>
-      <a href="/Login" class="button">انضم الان</a>
+      <a href="/login" class="button">انضم الان</a>
     </div>
   </div>
 
@@ -99,4 +99,16 @@
    
         <p class ="copyr">&copy  جميع الحقوق محفوظة لقاوم</p>
     </body>
+    <script>
+      let isSuccess = localStorage.getItem("isSuccess"); console.log("issuccess", isSuccess);
+      if(isSuccess === "true") setTimeout(()=> {
+         document.querySelectorAll('li a.login')[0].style.display = "none"
+         document.querySelectorAll('.content a')[0].style.display = "none"
+        }, 500);
+      else {
+        location.href = "/";
+        document.querySelectorAll('.content a')[0].style.display  = "unset";
+        document.querySelectorAll('li a.login')[0].style.display  = "unset";
+      }
+    </script>
 </body>

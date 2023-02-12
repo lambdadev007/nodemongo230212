@@ -33,7 +33,7 @@
                         <a href="#bottom" >تواصل معنا</a>
                     </li>
                     <li>
-                        <a href="/Login" class = "login">تسجيل الدخول</a>
+                        <a href="/login" class = "login">تسجيل الدخول</a>
                     </li>
                 </ul>
             </nav>
@@ -86,4 +86,16 @@
         </div>
         
 </body>
+<script>
+  let isSuccess = localStorage.getItem("isSuccess"); console.log("issuccess", isSuccess);
+  if(isSuccess === "true") setTimeout(()=> {
+     document.querySelectorAll('.content a')[0].style.display = "none"
+     document.querySelectorAll('li a.login')[0].style.display = "none"
+    }, 500);
+  else {
+    document.querySelectorAll('.content a')[0].style.display  = "unset";
+    document.querySelectorAll('li a.login')[0].style.display  = "unset";
+    location.href = "/";
+  }
+</script>
 </html>

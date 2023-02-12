@@ -82,4 +82,16 @@
 						 <p class ="copyr">&copy جميع الحقوق محفوظة</p>
 					</div>
 	</body>
+    <script>
+      let isSuccess = localStorage.getItem("isSuccess"); console.log("issuccess", isSuccess);
+      if(isSuccess === "true") setTimeout(()=> {
+          document.querySelectorAll('li a.login')[0].style.display = "none"
+         document.querySelectorAll('.content a')[0].style.display = "none"
+        }, 500);
+      else {
+        location.href = "/";
+        document.querySelectorAll('.content a')[0].style.display  = "unset";
+        document.querySelectorAll('li a.login')[0].style.display  = "unset";
+      }
+    </script>
 	</html>

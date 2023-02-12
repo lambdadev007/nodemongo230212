@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User')
 const passport = require('passport')
+const auth = require("./middleware/authMiddleware");
 const multer = require("multer")
 // configure multer 
 var storage = multer.diskStorage({
@@ -18,37 +19,37 @@ var storage = multer.diskStorage({
 
 isAuthenticated = (req,res,next) => {
     if (req.isAuthenticated()) return next()
-    res.redirect('/views/Login')
+    res.redirect('/views/login')
 }
 //  login user view 
-router.get('/Login', (req,res)=> {
-    res.render('views/Login', {
+router.get('/login', (req,res)=> {
+    res.render('views/login', {
         error: req.flash('error')
     })
 })
 
 // login post request 
-router.post('/Login',
+router.post('/login',
   passport.authenticate('local.Login', {
     successRedirect: '/users/profile',
-      failureRedirect: '/views/Login',
+      failureRedirect: '/views/login',
       failureFlash: true })
       )
 
 
 // sign up form 
-router.get('/Login', (req,res)=> {
-    res.render('views/Login', {
+router.get('/login', (req,res)=> {
+    res.render('views/login', {
         error: req.flash('error')
     })
 })
 
 // sign up post request
 
-router.post('/Login',
+router.post('/login',
   passport.authenticate('local.Login', {
     successRedirect: '/views/profile',
-      failureRedirect: '/views/Login',
+      failureRedirect: '/views/login',
       failureFlash: true })
       )
 

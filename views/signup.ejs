@@ -44,18 +44,19 @@
             <div id='login-form'class='login-page'>
                 <div class="form-box">
                     <div class='button-box'>
-                        <div id='btn' ></div>
+                        <div id='btn' style="right:0"></div>
                        <button type='button'onclick='login()'class='toggle-btn1' algin = "center">تسجيل الدخول</button> 
                        <button type='button'onclick='register()'class='toggle-btn2' algin = "center">تسجيل جديد </button>
                     </div>
-
-                <form id='loginForm' class='input-group-login' style="left:50px;" action = "/login" method="post">
-                <input type='email'class='input-field'placeholder='البريد الإلكتروني' style="color:white;" required id = "email" name="email">
-                <input type='password'class='input-field'placeholder='كلمة المرور' style="color:white;"  required id="pass" min="6" max="12" name="pass">
-                <input type='checkbox'class='check-box'><span><strong>تذكرني</strong></span>
-                <button type='submit'class='submit-btn'><strong>تسجيل الدخول</strong></button>
+                 <form id='register' class='input-group-register' style="left:50px" action = "/register" method="post">
+                 <input type='text'class='input-field'placeholder='الاسم الاول' required  id="fname" name="fname">
+                 <input type='text'class='input-field'placeholder='اسم العائلة' required id="lname" name="lname">
+                 <input type='email'class='input-field'placeholder='البريد الإلكتروني' required id ="email" name="email">
+                 <input type='password'class='input-field'placeholder='كلمة المرور' required id="pass" min="6" max="12" name="pass">
+                 <input type='password'class='input-field'placeholder='تأكيد كلمة المرور'  required id="repass" name="repass">
+                 <input type='checkbox'class='check-box' required id="gree"><span><strong>أوافق على الشروط والأحكام</strong></span>
+                 <button type='submit'class='submit-btn' id="adduser"><strong>تسجيل</strong></button>
                  </form>
-
                 </div>
             </div>
         </div>
@@ -103,28 +104,22 @@
                 } else {
                     alert("اسم المستخدم او كلمة المرور غير صحيح !")
                 }}
-			$("#loginForm").submit((event) => {
+                
+			$("#regoster").submit((event) => {
 				event.preventDefault();
 				$.ajax({
 					type: 'POST',
-					url: '/login',
-					data: $('#loginForm').serialize(),
+					url: '/',
+					data: $('#regoster').serialize(),
 					dataType: "json",
 					success: (response) => {
-                        console.log("res",response)
-                        localStorage.setItem("token", response.token);
-                        localStorage.setItem("isSuccess", true);
-                        setTimeout(()=>location.href = "/" , 100);
+            location.href = "/login";
 					},
 					error: () => {
-                        localStorage.setItem("token", "");
-                        localStorage.setItem("isSuccess", false);
 					}
 				})
 			});
         </script>
-        <style>
-        </style>
              </div>
             </div>
     </body>
