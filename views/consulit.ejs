@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html dir ="rtl" lang="ar">
+ <head>
+    <meta charset="utf-8">
+<meta name = "Website" content = "width=device-width, initial-scale=1.0">
+<title>قاوم</title>
+
+
+<link rel="icon" type="image/png"  href="favicon.ico">
+
+<link rel="stylesheet" href="css/Home.css">
+<link rel="stylesheet" href="css/consulit.css">
+ </head>
+
+<body>
+    <img src="images/consulit.jpg" class="backpic" alt="">
+
+<div class = "hero1">
+  
+    <nav>
+        <a href="/"><img src="images/Logo4.PNG" class = "Logo"></a>
+        <ul>
+            <li>
+                <a href="/">الصفحة الرئيسية</a>
+            </li>
+            <li>
+                <a href="/consulit">إستشارات</a>
+            </li>
+            <li>
+                <a href="program.html">برامج</a>
+            </li>
+            <li>
+                <a href="express.html">عبر</a>
+            </li>
+            <li>
+                <a href="#bottom" >تواصل معنا</a>
+            </li>
+            <li>
+                <a href="Login.html" class = "login">تسجيل الدخول</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class ="content" id="contant" >
+        <h1 class="title" style="text-align: center;"> الإستشارات</h1>
+
+        
+        <div class="up_frame" >
+            <ul style="list-style-type: none;">
+                <li id="s" value="1"><a href="#" onclick="app()">استفسار</a></li>
+                <li id="m" value="2"><a href="#" onclick="appea()">مكالمة</a></li>
+                <li id="j" value="3"><a href="#" onclick="appear()">حجز استشاره</a></li>
+            </ul> 
+        </div>
+    </div>
+</div>
+
+
+<div class="down_frame">
+    <div class="down" id="ask" >
+        <form action="#" id="f">
+            <p class="text-form">ضع استفسارك هنا و سيتم التواصل معك في اقرب وقت</p> <br>
+            <textarea name="textarea" id="area" class="form-control form-control-comment form-sh"  required></textarea> <br>
+            <input type="submit" value="ارسال" class="btn btn-shap" onclick="massge()">
+        </form>
+    </div>
+    <div class="down" id="call" >
+        <form action="#" id="f1">
+            <p class="text-form">سجل رقم الهاتف ليتم التواصل معك في اقرب وقت ممكن </p> <br>
+            <input type="tel" class="form-control form-sh" name="phone" id="numph" placeholder="0501234567" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+            <input class="btn " type="submit" value="ارسال" onclick="massge()">
+        </form>
+    </div>
+    <div  class="down" id="book">
+        <a href="#">
+            <div class="docter" id="docter1" onclick="form()">
+                <img class="porson" src="images/porsn.jpg" alt=""> <p  class="text"> الاء</p>
+                <p class="text">اخصائي نفسي حاصلة على درجة البكالوريس في علم
+                 النفس في جامعة الملك سعود</p>
+        </div> </a>
+        <a href="#">
+            <div class="docter" id="docter2" onclick="form()">
+                <img class="porson" src="images/porsn.jpg" alt=""> <p  class="text">محمد</p>
+                <p class="text">اخصائي اجتماعي حاصلة على درجة البكالوريس في الخدمة
+                 الاجتماعية في جامعة الامام  محمد بن سعود</p>
+        </div> </a>
+        <nav class="form-doc" id="form-doc">
+            <form action="#" id="fo" >
+                <p class="text1">مدة الجلسة </p>
+                <select name="select" id="time" class="form-control" required>
+                    <option value="30">30 دقيقة</option>
+                    <option value="40">40 دقيقة </option>
+                    <option value="60">60 دقيقة </option>
+                </select>
+                <p class="text1" > حدد الوقت و اليوم</p>
+                <input type="datetime-local" name="date" id="date" class="form-control" required>
+                <input type="submit" value="ارسال" class="btn btn-shap1"  onclick="massge()">
+            </form>
+        </nav>
+    </div>
+</div>
+
+         <script>
+            let s = document.getElementById('ask');
+            let m = document.getElementById('call');
+            let j = document.getElementById('book');
+            function app(){
+            if(m.style.display =='block' || j.style.display=='block') {
+                j.style.display='none';
+                m.style.display='none';   
+            }
+            s.style.display='block';
+        }
+            function appea(){
+            if(j.style.display=='block' || s.style.display=='block') {
+                   s.style.display='none';
+                   j.style.display='none';
+                }
+                m.style.display='block';
+
+            }
+            function appear(){
+           if(m.style.display=='block' || s.style.display=='block') {
+            s.style.display='none';
+            m.style.display='none';   
+            }
+            j.style.display='block';
+        }
+
+        function form(){
+          let f =document.getElementById('form-doc');
+          f.style.display='block';
+        }
+        function massge(){
+            let form=document.getElementById('f');
+            let form2=document.getElementById('fo');
+            let form1=document.getElementById('f1');
+            if (form.checkValidity()||form1.checkValidity() ||form2.checkValidity()) {
+            window.alert('تم ارسال البيانات و سيتم التواصل معك قريبا');
+        }
+        }
+       
+        </script> 
+   
+   <div class = "bottom" id = "bottom">
+    <div class = "title"><h4>تواصلوا معنا</h4></div> 
+    <ul class = "address"><strong>العنوان:</strong>
+        <li>جامعة الامام محمد بن سعود الإسلامية</li>
+        <li>مبنى ٣٢٤</li>
+     </ul>
+
+     <ul class = "address"><strong>الدعم الفني:</strong>
+        <li>٩٩٦٥٦٥٦٣٧٧٧٥+</li>
+     </ul>
+
+    <a href="https://twitter.com/Qawemhealth">
+     <img src="images/icons8-twitter-150.png"></a>
+
+     <a href="https://www.instagram.com/qawemhealth/">
+     <img src="images/icons8-instagram-150.png"></a>
+
+     <a href="mailto:qawem.contact@gmail.com">
+     <img src="images/icons8-mail-150.png"></a>
+
+     <a href="https://twitter.com/Qawemhealth">
+     <img src="images/icons8-phone-100.png"></a>
+
+     <p class ="copyr">&copy جميع الحقوق محفوظة</p>
+    </body>
+</body>

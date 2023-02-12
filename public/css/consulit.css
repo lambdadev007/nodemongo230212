@@ -1,0 +1,159 @@
+
+
+.hero1 {
+
+    width: 100%;
+    height:57vh;
+    background-image:linear-gradient(rgba(52, 76, 116, 0.44),rgba(75, 61, 136, 0.434)) ;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.backpic{
+       
+        height: 57%;
+        width: 100%;
+        display:table;
+        z-index: -1;
+        position: absolute;
+}
+h1.title{
+    margin-top: 70px;
+    font-size: 40px;
+    text-align: center;
+}
+.up_frame{
+    
+    width: 60em;
+    height: 5em;
+    position: absolute;
+    margin: 3em ;
+    margin-right: -14em;
+
+
+}
+#contant li{
+    float: right;
+    margin: 10px;
+}
+#contant li a{
+    display: inline;
+}
+.down{
+    display: none;
+    position: relative;
+    margin: 10px auto;
+    width: 100%;
+    height: 50%;
+    box-shadow: 0 0 4px gainsboro;
+    padding: 10em;
+   }
+
+   
+/*---------------------------------------------------------*/
+.form-control {
+    border-radius: 25px;
+    height: 50px;
+    padding: 15px 20px;
+    border-color: #f5f5f8;
+    box-shadow: inset 0 0 5px gainsboro ;
+
+}
+.form-sh{
+    margin-right: 28%;
+}
+
+.form-control:focus {
+    background-color: #f5f5f8;
+    border-color: #f5f5f8;
+    box-shadow: none;
+    outline: none;
+}
+.form-control-comment {
+    width:40em;
+    height: 20em;;
+    resize: none;
+}
+.form-doc{
+    display:none;
+    margin-top: 50%;
+    margin-right: 20%;
+    width: 60%;
+    position: relative;
+    text-align: center;
+    background-color: #b34564e6;
+    border-radius: 20px;
+}
+
+/*-------------------------------------------------------*/
+
+.btn:hover,
+button.btn:hover,
+.btn:focus,
+button.btn:focus {
+    background-color: #ccd4d4;
+    color: #b34564;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border: 1px solid #b34564;
+    
+}
+.btn {
+    background-color: #6899b4;
+    color: #fff; 
+    border: 1px solid #ccd4d4;
+    border-radius: 50px;
+    width: 160px;
+    height: 45px;
+    font-size: 18px;
+}
+
+.btn-shap{
+    margin-top: 40px;
+    margin-right:44% ;
+    align-items: center;
+}
+.btn-shap1{
+    margin-top: 40px;
+    margin-right:30% ;
+    margin-left: 30%;
+    align-items: center;
+}
+
+.text-form{
+    color: #6899b4;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.docter{
+    background-color: #ccd4d49f;
+    border: 3px solid  #6899b4 ;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 20px;
+    width: 100%;
+    box-shadow: 0 0 5px rgb(201, 200, 200);
+    float: right;
+    transition: all .2s ease-in-out;    
+}
+
+.docter:hover{
+    transform: scale(0.95); 
+
+}
+
+.text1{
+    color:#6899b4;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+img.porson{
+    border-radius: 70px;
+    
+}
+

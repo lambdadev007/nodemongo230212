@@ -1,0 +1,219 @@
+
+
+.hero1 {
+
+    width: 100%;
+    height:57vh;
+    background-image:linear-gradient(rgba(52, 76, 116, 0.44),rgba(75, 61, 136, 0.434)) ;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.backpic{
+       
+        height: 57%;
+        width: 100%;
+        display:table;
+        z-index: -1;
+        position: absolute;
+}
+h1.title{
+    margin-top: 70px;
+    font-size: 40px;
+}
+.up_frame{
+    
+    width: 60em;
+    height: 5em;
+    position: absolute;
+    margin: 3em ;
+    margin-right: -14em;
+
+
+}
+#contant li{
+    float: right;
+    margin: 10px;
+}
+#contant li a{
+    display: inline;
+}
+.down{
+    display: none;
+    position: relative;
+    margin: 10px auto;
+    width: 100%;
+    box-shadow: 0 0 4px gainsboro;
+    padding: 10em;
+
+   }
+
+   
+.card{
+    
+        display: flex;
+        text-align: center;
+        height:320px;
+        width: 320px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: -4 15px 25px #6899b4;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        padding: 10px;
+
+}
+.card-text{
+    font-size: x-small;
+    padding-bottom: 25px ;
+}
+
+.button{
+    color: black;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-width:medium;
+    border: solid;
+    border-color: #6899b4;
+    font-size: small;
+    padding: 5px;
+    text-decoration: none;
+
+
+ 
+}
+li{
+    list-style-type: decimal;
+    color: black;
+    
+}
+
+.container1 {
+    display: flex;
+    gap: 12px;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 30px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    background-color: #fff;
+    margin-top: 5px;
+    text-align: right;
+  }
+  .backcard1{
+    background-color: #6899b4;
+    height: 500px;
+    width: 450px;
+    border-radius: 12px;
+    margin-top:  25px  ;
+    margin-right: 135px;
+    margin-left: 135px;
+
+
+
+  }
+  .card11 {
+    height: 450px;
+     width: 400px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin-top:  25px  ;
+    margin-right: 20px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .p11{
+    text-align: center;
+     color: #6899b4;
+    font-size: large;
+     font-weight: bold;
+    margin-top: 50px;
+  }
+  .text5{
+    text-align: center;
+    color: #6899b4;
+
+  }
+
+  .join{
+    text-align: center;
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+  }
+ /************************************************************/
+ div.bottom {
+width: auto;
+height: 250px;
+margin: auto;
+padding-top: 10px;
+background-color: white;
+text-align: right;
+color: #6899b4;
+margin-top: 150px;
+margin-bottom: 0.2px;
+}
+
+div.title{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+div.bottom img {
+width: 40px;
+height: 40px;
+margin-right: 40px;
+margin-top: 5px;
+border-radius: 5px;
+float:left;
+margin-left: 10px;
+}
+
+div.bottom img:hover{
+  background-color: #b34564;
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  border-radius: 5px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+
+
+border-radius: 5px;
+}
+
+.copyr {
+  text-align: center;
+  margin-right: 50px;
+  float: center;
+}
+
+.address{
+  text-align:right;
+  top: 30px;
+  float: right;
+  margin-right: 80px;
+}
+  
+  

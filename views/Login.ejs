@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html dir ="rtl" lang="ar">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name = "Website" content = "width=device-width, initial-scale=1.0">
+        <title>قاوم | تسجيل الدخول</title>
+        <link rel="icon" type="image/png"  href="images/favicon.ico">
+        <link rel="stylesheet" href="css/Login.css">
+    </head>
+    <body>
+        <div class = "hero">
+            <video autoplay loop muted plays-inline class = "back-video">
+                <source src="images/video.mp4" type="video/mp4">
+            </video>
+            <nav>
+                <a href="/"><img src="images/Logo4.png" class = "Logo"></a>
+                <ul>
+                    <li>
+                        <a href="/">الصفحة الرئيسية</a>
+                    </li>
+                    <li>
+                        <a href="#">إستشارات</a>
+                    </li>
+                    <li>
+                        <a href="#">برامج</a>
+                    </li>
+                    <li>
+                        <a href="#">عبر</a>
+                    </li>
+                    <li>
+                        <a href="#">تواصل معنا</a>
+                    </li>
+                    <li>
+                        <a href="/Login" class = "login">تسجيل الدخول</a>
+                    </li>
+                </ul>
+            </nav>
+       
+            <div id='login-form'class='login-page'>
+                <div class="form-box">
+                    <div class='button-box'>
+                        <div id='btn'></div>
+                       <button type='button'onclick='login()'class='toggle-btn1' algin = "center">تسجيل الدخول</button> 
+                       <button type='button'onclick='register()'class='toggle-btn2' algin = "center">تسجيل جديد </button>
+                    </div>
+
+                <form id='login' class='input-group-login' action = "/Login" method="post">
+                <input type='text'class='input-field'placeholder='البريد الإلكتروني' required id = "email02" name="email02">
+                <input type='password'class='input-field'placeholder='كلمة السر' required id = "pass3" min="6" max="12" name="pass3">
+                <input type='checkbox'class='check-box'><span><strong>تذكرني</strong></span>
+                <button type='submit'class='submit-btn'><strong>تسجيل الدخول</strong></button>
+                 </form>
+
+                 <form id='register' class='input-group-register' action = "/Login" method="post">
+                 <input type='text'class='input-field'placeholder='الاسم الاول' required  id="fname" name="fname">
+                 <input type='text'class='input-field'placeholder='اسم العائلة' required id="lname" name="lname">
+                 <input type='email'class='input-field'placeholder='البريد الإلكتروني' required id ="email01" name="email01">
+                 <input type='password'class='input-field'placeholder='كلمة المرور' required id="pass" min="6" max="12" name="pass">
+                 <input type='password'class='input-field'placeholder='تأكيد كلمة المرور'  required id="repass" name="repass">
+                 <input type='checkbox'class='check-box' required id="gree"><span><strong>أوافق على الشروط والأحكام</strong></span>
+                <button type='submit'class='submit-btn' id="adduser" href="#" onclick="saveData();"><strong>تسجيل</strong></button>
+                 </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            var x=document.getElementById('login');
+            var y=document.getElementById('register');
+            var z=document.getElementById('btn');
+            function register()
+            {
+                x.style.left='-400px';
+                y.style.left='50px';
+                z.style.left='110px';
+            }
+            function login()
+            {
+                x.style.left='50px';
+                y.style.left='450px';
+                z.style.left='0px';
+            }
+        </script>
+        <script>
+            var modal = document.getElementById('login-form');
+            window.onclick = function(event) 
+            {
+                if (event.target == modal) 
+                {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+        
+        <script >
+
+            function saveData() {
+            var username = document.getElementById("fname").value;
+            var lastname = document.getElementById("lname").value;
+            var pass = document.getElementById("repass").value;
+            var password = document.getElementById("pass").value;
+    
+
+  
+    if ( password == pass) {
+       
+        alert(username +lastname+ "لقد تم تسجيلك بنجاح");
+      
+      } else {
+        alert("اسم المستخدم او كلمة المرور غير صحيح !")
+      }}
+        </script>
+             </div>
+            </div>
+    </body>
+</html>

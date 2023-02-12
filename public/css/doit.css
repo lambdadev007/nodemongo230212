@@ -1,0 +1,252 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Paddins',sans-serif; /* change to an arabic font */
+  }
+  
+  body {
+    direction: rtl;
+  }
+  
+  .hero {
+  
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  nav.Logo {
+    width: 80px;
+  }
+  
+  nav ul li {
+  
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #ccd4d4;
+    font-size: 17px;
+      list-style: none;
+      display: inline-block;
+      margin-left: 40px;
+  }
+  
+  nav ul li a {
+      text-decoration: none;
+      color: #ccd4d4;
+      font-size: 17px;
+  }
+  
+  img {
+  width: 120px;
+  height: 120px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  .content h1 {
+    text-align: center;
+    font-size: 75px;
+    color: white; 
+    font-weight: 600;
+  }
+  
+  .content a{
+    text-decoration: none;
+    display: inline-block;
+    color: #ccd4d4; /* change color */
+    font-size: 20px;
+    border: 2px solid #ccd4d4; /* change color */
+    padding: 12px 60px;
+    border-radius: 50px;
+    margin-top: 20px; 
+  }
+  
+  .content a:hover{
+    color: #b34564 ;
+    border: 2px solid #b34564 ;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  
+  nav ul li :hover{
+    color: #b34564;
+    text-decoration:none; /* might change later */
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  
+  .back-video {
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    z-index: -1;
+    margin-top: 170px;
+  }
+  
+  @media (min-aspect-ratio: 16/9){
+    .back-video {
+        width: 1000px;
+        height: 500px;
+  }
+  }
+  
+  @media (max-aspect-ratio: 16/9){
+  .back-video {
+    width: 50px;
+    height: 100%;
+  }
+  }
+  
+  div.About {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  padding: 0;
+  background-color: white;
+  text-align: right;
+  color: #6899b4;
+  margin-right: 300px;
+  margin-left: 300px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  }
+  
+  div.bottom {
+  width: auto;
+  height: 60px;
+  margin: auto;
+  padding-top: 40px;
+  background-color: white;
+  text-align: right;
+  color: #6899b4;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  }
+  
+  div.title{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    text-align: right;
+  }
+  
+  div.bottom img {
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+  margin-top: 5px;
+  border-radius: 5px;
+  float:left;
+  margin-left: 10px;
+  }
+  
+  div.bottom img:hover{
+    background-color: #b34564;
+    width: 40px;
+    height: 40px;
+    opacity: 0.7;
+    border-radius: 5px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+  
+  
+  border-radius: 5px;
+  }
+
+  
+  .image__title {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .myImage {
+  float: left;
+  height: 350px;
+  width: 405px;
+  margin-top: -120px;
+  }
+  
+  h3 {
+    font-size: 45px;
+    color:#6899b4;
+    margin-right: 40px;
+  }
+  
+  h4 {
+    font-size: 45px;
+    color:#6899b4;
+  }
+  
+  .image__title {
+  font-size: 2em;
+  font-weight: bold;
+  }
+  
+  .p1{
+    text-align: right;
+    color: #6899b4;
+    font-size: 30px;
+     font-weight: bold;
+    margin-top: 440px;
+  }
+  
+  .copyr {
+    text-align: center;
+    margin-right: 50px;
+    float: center;
+  }
+  
+  .address{
+    text-align:right;
+    top: 20px;
+    float: right;
+    margin-right: 80px;
+    margin-bottom: 30px;
+  }
+
+  
+  
