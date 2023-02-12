@@ -114,6 +114,7 @@
                         console.log("res",response)
                         localStorage.setItem("token", response.token);
                         localStorage.setItem("isSuccess", true);
+                        localStorage.setItem("loginTime", Date.now());
                         setTimeout(()=>location.href = "/" , 100);
 					},
 					error: () => {

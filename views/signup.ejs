@@ -54,7 +54,7 @@
                  <input type='email'class='input-field'placeholder='البريد الإلكتروني' required id ="email" name="email">
                  <input type='password'class='input-field'placeholder='كلمة المرور' required id="pass" min="6" max="12" name="pass">
                  <input type='password'class='input-field'placeholder='تأكيد كلمة المرور'  required id="repass" name="repass">
-                 <input type='checkbox'class='check-box' required id="gree"><span><strong>أوافق على الشروط والأحكام</strong></span>
+                 <input type='checkbox'class='check-box' id="gree"><br/><span><strong>أوافق على الشروط والأحكام</strong></span>
                  <button type='submit'class='submit-btn' id="adduser"><strong>تسجيل</strong></button>
                  </form>
                 </div>
@@ -105,17 +105,18 @@
                     alert("اسم المستخدم او كلمة المرور غير صحيح !")
                 }}
                 
-			$("#regoster").submit((event) => {
+			$("#register").submit((event) => {
 				event.preventDefault();
 				$.ajax({
 					type: 'POST',
-					url: '/',
-					data: $('#regoster').serialize(),
+					url: '/register',
+					data: $('#register').serialize(),
 					dataType: "json",
 					success: (response) => {
             location.href = "/login";
 					},
-					error: () => {
+					error: (err) => {
+            alert(err.message);
 					}
 				})
 			});

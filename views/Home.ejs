@@ -38,6 +38,9 @@
           <li>
               <a href="/login" class = "login">تسجيل الدخول</a>
           </li>
+          <li>
+              <a href="#" class = "logout">تسجيل خروج</a>
+          </li>
       </ul>
     </nav>
     <div class ="content">
@@ -144,15 +147,14 @@
 
      <p class ="copyr">&copy  جميع الحقوق محفوظة لقاوم</p>
     </body>
-    <script>
+    <script>      
       let isSuccess = localStorage.getItem("isSuccess"); console.log("issuccess", isSuccess);
       if(isSuccess === "true") setTimeout(()=> {
-          document.querySelectorAll('li a.login')[0].style.display = "none"
+         document.querySelectorAll('li a.login')[0].style.display = "none";
+         document.querySelectorAll('li a.logout')[0].style.display = "unset";
          document.querySelectorAll('.content a')[0].style.display = "none"
         }, 500);
-      else {
-        document.querySelectorAll('.content a')[0].style.display  = "unset";
-        document.querySelectorAll('li a.login')[0].style.display  = "unset";
-      }
+      else document.querySelectorAll('li a.logout')[0].style.display = "none";
     </script>
+<script src = "js/common.js"></script>
 </html>
